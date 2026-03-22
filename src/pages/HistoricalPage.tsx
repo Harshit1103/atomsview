@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { format,parseISO,differenceInDays } from 'date-fns';
-import { AlertCircle,Calendar,TrendingUp,Info,Thermometer,CloudRain,Wind,Activity } from 'lucide-react';
+import { AlertCircle,Calendar,TrendingUp,Info,Thermometer,CloudRain,Wind } from 'lucide-react';
 import { HistoricalChart } from '../components/HistoricalChart';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { StatCard } from '../components/StatCard';

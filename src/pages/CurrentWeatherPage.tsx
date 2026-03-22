@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { format, parseISO } from 'date-fns';
 import {
   Thermometer,Droplets,Wind,Sun,Sunset,Activity,
-  AlertCircle,RefreshCw,CloudRain,Gauge,Eye,ArrowUp,ArrowDown
+  AlertCircle,RefreshCw,CloudRain,Gauge,ArrowUp,ArrowDown
 } from 'lucide-react';
 import { StatCard } from '../components/StatCard';
 import { HourlyChart } from '../components/HourlyChart';

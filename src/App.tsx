@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext, useCallback } from 'react';
+import { useState, useEffect, createContext, useContext, useCallback } from 'react';
 import { CloudSun, BarChart2, WifiOff, Sun, Moon } from 'lucide-react';
 import { CurrentWeatherPage } from './pages/CurrentWeatherPage';
 import { HistoricalPage } from './pages/HistoricalPage';
