@@ -15,15 +15,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Each chunk cached independently — only re-download what changed
-        manualChunks(id) {
-          if (id.includes('node_modules/react-dom'))   return 'react-dom'
-          if (id.includes('node_modules/react'))        return 'react'
-          if (id.includes('node_modules/recharts') ||
-              id.includes('node_modules/d3-') ||
-              id.includes('node_modules/victory-'))     return 'charts'
-          if (id.includes('node_modules/date-fns'))     return 'dates'
-          if (id.includes('node_modules/lucide-react')) return 'icons'
-        },
+       manualChunks(id) {
+  // react + react-dom MUST stay together in one chunk
+  if (id.includes('node_modules/react')) return 'react'
+  if (id.includes('node_modules/recharts') ||
+      id.includes('node_modules/d3-'))    return 'charts'
+  if (id.includes('node_modules/date-fns'))     return 'dates'
+  if (id.includes('node_modules/lucide-react')) return 'icons'
+},
         entryFileNames:  'assets/[name]-[hash].js',
         chunkFileNames:  'assets/[name]-[hash].js',
         assetFileNames:  'assets/[name]-[hash].[ext]',
